@@ -1,0 +1,27 @@
+---
+layout: '@/layouts/Layout.astro'
+title: "Search"
+metaTitle: "Search"
+metaDescription: "Astro Just Docs has optional search, powered by PageFind."
+nav_order: 3
+show_toc: false
+---
+
+Astro Just Docs is powered by PageFind.  to add client side search powered by a JSON index that Gatsby generates on *build*. Search results are shown in an auto complete dropdown. There is no search page. By default, all search results are indexed using the following data points:
+
+- title
+- MetaTitle
+- MetaDescription
+
+## Enabling search
+
+Search is enabled by default.
+
+## Generating search results
+
+Search results are generated automatically on site build (`yarn build`).
+
+## Hiding pages from search
+
+Currently all MDX files will be indexed and fully searchable. Allowing pages to be flagged as not indexed is a planned feature for the future.
+

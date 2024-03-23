@@ -1,0 +1,151 @@
+---
+import * as CONFIG from "../config";
+import { getNavigationStructure } from "../utils/getNavigationStructure";
+import Navigation from "../components/Navigation.astro";
+import ThemeIcon from "../components/ThemeIcon.astro";
+import TableOfContents from "../components/TableOfContents.astro";
+import SearchField from "../components/SearchField.astro";
+
+// Get the navigation structure
+const navigation = getNavigationStructure();
+
+interface Props {
+  content: {
+    title: string;
+    metaTitle: string;
+    metaDescription: string;
+  };
+  headings: {
+    depth: number;
+    id: string;
+    text: string;
+  }[];
+}
+
+const {
+  content: { title, metaTitle, metaDescription },
+  headings,
+} = Astro.props;
+
+const basePath = `${CONFIG.GITHUB.repo}/blob/${CONFIG.GITHUB.branch}/`;
+let pagePath = Astro.url.pathname; // Gets the URL path, like '/blog/my-post'
+
+// if the page is a directory, append 'index' to the path
+if (pagePath.endsWith("/")) {
+  pagePath += "index";
+}
+
+// Get the current page's URL on GitHub
+const editUrl = `${basePath}src/pages${pagePath}.mdx`;
+
+import "../styles/globals.scss";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      {title ? `${metaTitle || title} - ${CONFIG.SITE.title}` : CONFIG.SITE.title}
+    </title>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <div class="grid grid-cols-12">
+        <div
+          class="col-span-12 md:col-span-4 lg:col-span-3 xl:col-span-3 2xl:col-span-2 sidebar border-r md:min-h-screen"
+        >
+          <header class="h-16 border-b md:mb-8 dark:border-gray-700">
+            <div class="px-8">
+              <h1 class="text-2xl font-bold py-4">{CONFIG.SITE.title}</h1>
+            </div>
+          </header>
+          <Navigation navigation={navigation} />
+        </div>
+        <div
+          class="col-span-12 md:col-span-8 lg:col-span-9 xl:col-span-9 2xl:col-span-10"
+        >
+          <main class="mb-8">
+            <div class="h-16 border-b dark:border-gray-700 mb-8 flex gap-x-8">
+              <div class="flex-1 px-8 my-auto">
+                <div class="max-w-xl">
+                  <SearchField />
+                </div>
+              </div>
+
+              <div class="my-auto first-line:justify-end flex-none">
+                <ThemeIcon />
+              </div>
+            </div>
+
+            <article class="px-8">
+              <header class="max-w-2xl">
+                <h1 class="text-4xl font-bold">{title}</h1>
+                <p class="text-2xl text-grey-dk-000 mb-8">
+                  {metaDescription}
+                </p>
+              </header>
+
+              <div class="grid grid-cols-12 lg:gap-x-16">
+                <div class="col-span-12 lg:col-span-9 order-2 lg:order-1">
+                  <section class="main-content">
+                    <slot />
+                  </section>
+                </div>
+
+                <div class="col-span-12 lg:col-span-3 order-1 lg:order-2">
+                  {
+                    headings && headings.length > 0 && (
+                      <nav class="article-toc lg:px-0 mb-8 sticky top-10">
+                        <h3 class="font-bold text-lg">Table of Content</h3>
+                        <TableOfContents headers={headings} />
+                      </nav>
+                    )
+                  }
+                </div>
+              </div>
+            </article>
+          </main>
+
+          <footer
+            class="text-sm px-8 py-8 text-gray-400 border-t dark:border-gray-700"
+          >
+            <p class="mb-4">
+              Copyright &copy; {new Date().getFullYear()} Tyler Rilling. Distributed
+              by an MIT license.
+            </p>
+
+            <small>
+              <a class="text-small text-purple-600 mb-0" href={editUrl}>
+                Edit this page on GitHub
+              </a>
+            </small>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script is:inline>
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+  window.localStorage.setItem("theme", theme);
+</script>

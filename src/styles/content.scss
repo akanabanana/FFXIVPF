@@ -1,0 +1,121 @@
+// Styles for rendered markdown in the .main-content container
+
+.main-content {
+
+  p ~ p {
+    @apply mt-3;
+  }
+
+  p {
+    code {
+      @apply p-1 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded;
+    }
+  }
+
+  hr {
+    @apply my-6 border-t border-gray-200;
+  }
+
+  a {
+    @apply text-purple-700 underline;
+    @apply dark:text-purple-400;
+  }
+
+
+  ol,
+  ul,
+  dl,
+  pre,
+  address,
+  blockquote,
+  .table-wrapper {
+    @apply mt-3;
+  }
+
+  a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  ul,
+  ol {
+    @apply pl-2;
+  }
+
+  li {
+    .highlight {
+      @apply mt-2;
+    }
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: step-counter;
+
+    > li {
+      @apply relative;
+
+      &::before {
+        @apply absolute top-[0.2em] left-[-1.6em] text-sm;
+        content: counter(step-counter);
+        counter-increment: step-counter;
+      }
+
+      ol {
+        counter-reset: sub-counter;
+
+        li {
+          &::before {
+            content: counter(sub-counter, lower-alpha);
+            counter-increment: sub-counter;
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    @apply list-none;
+
+    > li {
+      @apply relative;
+      &::before {
+        @apply absolute -left-2.5;
+        content: "•";
+        
+      }
+    }
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    margin-top: 1.5em;
+    margin-bottom: 0.25em;
+
+    &:first-child {
+      @apply mt-2;
+    }
+
+    + table,
+    + .table-wrapper,
+    + .code-example,
+    + .highlighter-rouge {
+      margin-top: 1em;
+    }
+
+    + p {
+      margin-top: 0;
+    }
+  }
+
+  .astro-code {
+    @apply p-4 rounded;
+  }
+}

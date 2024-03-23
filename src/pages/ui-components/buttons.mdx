@@ -1,0 +1,90 @@
+---
+layout: '@/layouts/Layout.astro'
+title: Buttons
+metaDescription: "Various button components to use in your project"
+parent: UI Components
+---
+
+import Button from '@/components/mdx/Button.astro'
+
+## Basic Use
+
+```js
+  import Button from '@/components/mdx/Button.astro'
+```
+
+```mdx
+<Button class="btn" href="http://example.com/">Link Button</Button>
+```
+
+---
+
+## Basic button styles
+
+### Links that look like buttons
+
+<Button class="btn" href="http://example.com/">Link Button</Button>
+<br />
+<Button class="btn btn-purple" href="http://example.com/">Link Button</Button>
+<Button class="btn btn-blue" href="http://example.com/">Link Button</Button>
+<Button class="btn btn-green" href="http://example.com/">Link Button</Button>
+<br />
+<Button class="btn btn-outline" href="http://example.com/">Link Button</Button>
+
+```markdown
+<Button class="btn" href="http://example.com/">Link Button</Button>
+
+<Button class="btn btn-purple" href="http://example.com/">Link Button</Button>
+<Button class="btn btn-blue" href="http://example.com/">Link Button</Button>
+<Button class="btn btn-green" href="http://example.com/">Link Button</Button>
+
+<Button class="btn btn-outline" href="http://example.com/">Link Button</Button>
+```
+
+***
+
+## Using utilities with buttons
+
+### Button size
+
+Wrap the button in a container that uses the [font-size utility classes](/utilities/typography) to scale buttons:
+
+<span class="fs-6">
+<Button class="btn" href="http://example.com/">Big Button</Button>
+</span>
+
+<span class="fs-3">
+<Button class="btn" href="http://example.com/">Tiny Button</Button>
+</span>
+
+```markdown
+<span class="fs-8">
+<Button class="btn" href="http://example.com/">Big Button</Button>
+</span>
+
+<span class="fs-3">
+<Button class="btn" href="http://example.com/">Tiny Button</Button>
+</span>
+```
+
+### Spacing between buttons
+
+Use the [margin utility classes](/utilities/layout/) to add spacing between two buttons in the same block.
+
+
+<Button class="btn btn-purple mr-2" href="http://example.com/">Button with space</Button>
+<Button class="btn btn-blue mr-2" href="http://example.com/">Button</Button>
+
+***
+
+<Button class="btn btn-green mr-4" href="http://example.com/">Button with more space</Button>
+<Button class="btn btn-blue" href="http://example.com/">Button</Button>
+
+
+```markdown
+<Button class="btn btn-purple mr-2" href="http://example.com/">Button with space</Button>
+<Button class="btn btn-blue mr-2" href="http://example.com/">Button</Button>
+
+<Button class="btn btn-green mr-4" href="http://example.com/">Button with more space</Button>
+<Button class="btn btn-blue" href="http://example.com/">Button</Button>
+```

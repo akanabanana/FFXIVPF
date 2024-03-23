@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html, body {
+  @apply bg-white min-h-screen;
+  @apply dark:bg-[#16161D] dark:text-gray-200 dark:border-gray-800;
+}
+
+
+.sidebar {
+  @apply relative bg-[#f5f6fa];
+  @apply before:content-[''] before:block before:w-[9999px] before:h-full before:bg-[#f5f6fa] before:absolute before:top-0 before:left-[-9999px] before:z-10 before:transition-transform before:duration-300 before:ease-in-out;
+  @apply dark:bg-[#16161D] dark:before:bg-[#16161D] dark:border-gray-700;
+}
+
+@import "./search.scss";
+@import "./typography.scss";
+@import "./content.scss";
+@import "./table.scss";
