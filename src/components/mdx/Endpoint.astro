@@ -1,0 +1,29 @@
+---
+const props = Astro.props;
+
+interface Props {
+  title?: string;
+  types?: string[]; // GET, POST, PUT, DELETE, ETC
+}
+---
+
+<div class="endpoint">
+  <div class="flex gap-4 mb-2">
+    {props.title && <p class="endpoint-title">{props.title}</p>}
+
+    {
+      props.types && (
+        <div class="endpoint-types">
+          {props.types.map((type) => (
+            <span class="endpoint-type">
+              {type}
+            </span>
+          ))}
+        </div>
+      )
+    }
+  </div>
+  <div class="endpoint-details">
+    <slot />
+  </div>
+</div>

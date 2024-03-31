@@ -1,0 +1,19 @@
+---
+const props = Astro.props;
+
+interface Props {
+  title?: string;
+  class?: string;
+  type?: string;
+}
+---
+
+<div
+  {...props}
+  class="tooltip { `tooltip-${props.cols}` || 'default' } { props.class || '' }"
+>
+  {props.title && <p class="tooltip-title">{props.title}</p>}
+  <div>
+    <slot />
+  </div>
+</div>

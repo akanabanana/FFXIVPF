@@ -2,101 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-html, body {
-  @apply bg-white min-h-screen;
-  @apply dark:bg-zinc-900 dark:text-gray-200 dark:border-gray-800;
-}
-
-a {
-  @apply hover:text-primary;
-}
-
-.sidebar {
-  @apply relative bg-slate-50;
-  @apply before:content-[''] before:block before:w-[9999px] before:h-full before:bg-slate-50 before:absolute before:top-0 before:left-[-9999px] before:z-10 before:transition-transform before:duration-300 before:ease-in-out;
-  @apply dark:bg-zinc-900 dark:before:bg-zinc-900 dark:border-gray-700;
-}
-
-.pagefind-ui__drawer {
-  @apply px-8;
-}
-
-.btn {
-  @apply bg-white border-2 border-black rounded font-mono font-bold px-5 py-2 inline-block shadow-[3px_3px_0_-1px_#000,_3px_3px_0_#000] transition-all duration-150 ease-in-out mb-2;
-  @apply dark:shadow-[3px_3px_0_-1px_#fff,_3px_3px_0_#fff] dark:border-black dark:bg-white dark:text-black;
-  text-decoration: none !important;
-
-  &:hover {
-    @apply shadow-[0_0_0_-1px_#fff,_0_0_0_#fff] translate-x-[3px] translate-y-[3px];
-  }
-
-  &.btn-sm {
-    @apply text-sm;
-  }
-
-  &.btn-lg {
-    @apply text-lg;
-  }
-
-  &.btn-wide {
-    @apply px-9;
-  }
-
-  &.btn-primary {
-    @apply bg-primary text-black;
-    @apply dark:shadow-primary;
-  }
-
-  &.btn-primary-light {
-    @apply bg-primary-light text-black;
-    @apply dark:shadow-primary-light;
-  }
-
-  &.btn-secondary {
-    @apply bg-secondary text-black;
-    @apply dark:shadow-secondary;
-  }
-
-  &.btn-secondary-light {
-    @apply bg-secondary-light text-black;
-    @apply dark:shadow-secondary-light;
-  }
-
-  &.btn-highlighter {
-    @apply bg-highlighter text-black;
-    @apply dark:shadow-highlighter;
-  }
-}
-
-.label {
-  @apply text-sm font-bold text-white bg-primary inline-block px-2 py-1 rounded-sm;
-  @apply dark:text-gray-400;
-
-  &.label-secondary {
-    @apply bg-secondary text-black;
-  }
-
-  &.label-highlighter {
-    @apply bg-highlighter text-black;
-  }
-
-  &.label-primary {
-    @apply bg-primary text-black;
-  }
-
-  &.label-secondary-light {
-    @apply bg-secondary-light text-black;
-  }
-
-  &.label-primary-light {
-    @apply bg-primary-light text-black;
-  }
-
-}
+@import "./layout.scss";
 
 @import "./search.scss";
 @import "./typography.scss";
 @import "./content.scss";
 @import "./table.scss";
+
+@import "./components/button.scss";
+@import "./components/label.scss";
+@import "./components/tooltip.scss";
+@import "./components/endpoint.scss";
+@import "./components/card.scss";
