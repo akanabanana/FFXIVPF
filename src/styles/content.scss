@@ -2,11 +2,9 @@
 
 .main-content {
 
-  p ~ p {
-    @apply mt-3;
-  }
-
   p {
+    @apply mb-4;
+
     code {
       @apply p-1 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded;
     }
@@ -16,9 +14,8 @@
     @apply my-6 border-t border-gray-200;
   }
 
-  a {
-    @apply text-purple-700 underline;
-    @apply dark:text-purple-400;
+  a:not(.btn) {
+    @apply text-primary underline;
   }
 
 
