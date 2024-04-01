@@ -1,27 +1,29 @@
 ---
-const props = Astro.props;
-
+// Import the Astro global type for props
 interface Props {
   title?: string;
-  types?: string[]; // GET, POST, PUT, DELETE, ETC
+  types?: string[]; // Array of strings for HTTP methods: GET, POST, PUT, DELETE, etc.
+  url?: string;
 }
+
+const props = Astro.props as Props;
 ---
 
 <div class="endpoint">
-  <div class="flex gap-4 mb-2">
-    {props.title && <p class="endpoint-title">{props.title}</p>}
-
-    {
-      props.types && (
-        <div class="endpoint-types">
-          {props.types.map((type) => (
-            <span class="endpoint-type">
-              {type}
-            </span>
-          ))}
-        </div>
-      )
-    }
+  <div class="mb-2">
+    <div class="flex gap-4">
+      {props.title && <p class="endpoint-title">{props.title}</p>}
+      {
+        props.types?.length > 0 && (
+          <div class="endpoint-types">
+            {props.types.map((type) => (
+              <span class="endpoint-type">{type}</span>
+            ))}
+          </div>
+        )
+      }
+    </div>
+    {props.url && <p class="endpoint-url">{props.url}</p>}
   </div>
   <div class="endpoint-details">
     <slot />

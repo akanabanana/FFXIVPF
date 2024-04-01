@@ -1,7 +1,19 @@
 .tooltip {
-  @apply bg-primary-light border-l-primary p-4 border-l-8 my-8;
+  @apply bg-slate-300 border-l-slate-400 py-5 px-8 border-l-8 my-8 text-black;
 
   .tooltip-title {
     @apply mb-2 font-black text-lg;
+  }
+
+  &.tooltip-primary {
+    @apply bg-primary-light border-l-primary;
+  }
+
+  &.tooltip-secondary {
+    @apply bg-secondary-light border-l-secondary;
+  }
+
+  &.tooltip-notice {
+    @apply bg-highlighter border-l-highlighter-dark;
   }
 }

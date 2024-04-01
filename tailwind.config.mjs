@@ -12,6 +12,7 @@ export default {
         secondary: "#00D7B0",
         "secondary-light": "#B8FFF3",
         highlighter: "#FAF77D",
+        "highlighter-dark": "#C5C207",
       },
     },
   },

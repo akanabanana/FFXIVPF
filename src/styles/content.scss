@@ -6,7 +6,7 @@
     @apply mb-4;
 
     code {
-      @apply p-1 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded;
+      @apply p-1 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-sm;
     }
   }
 
@@ -119,8 +119,25 @@
     margin-top: 1.5em;
     margin-bottom: 0.25em;
 
+    code {
+      @apply text-zinc-500;
+    }
+
     &:first-child {
       @apply mt-2;
+    }
+
+    .icon-link {
+      @apply opacity-0 pl-2;
+      &::before {
+        content: '#';
+        @apply text-primary;
+      }
+    }
+
+    &:hover .icon-link {
+      display: inline-block;
+      @apply opacity-100;
     }
 
     + table,
@@ -136,6 +153,6 @@
   }
 
   .astro-code {
-    @apply p-4 rounded;
+    @apply p-4 rounded mb-4;
   }
 }

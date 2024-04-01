@@ -1,17 +1,17 @@
 ---
-const props = Astro.props;
-
+// Define the props interface
 interface Props {
   title?: string;
   class?: string;
 }
+
+const props = Astro.props as Props;
+const cardClass =
+  `card ${props.class || ""}`.trim();
 ---
 
-<div
-  {...props}
-  class="card p-5 { `card-${props.cols}` || 'default' } { props.class || '' }"
->
-  {props.title && <p class="card-title mb-4">{props.title}</p>}
+<div class={cardClass}>
+  {props.title && <p class="card-title">{props.title}</p>}
   <div>
     <slot />
   </div>

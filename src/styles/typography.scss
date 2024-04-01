@@ -7,17 +7,17 @@ h1,
 
 h2,
 .text-beta {
-  @apply text-3xl font-bold;
+  @apply text-3xl font-black;
 }
 
 h3,
 .text-gamma {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-black;
 }
 
 h4,
 .text-delta {
-  @apply text-xl font-bold leading-relaxed uppercase;
+  @apply text-xl font-black leading-relaxed uppercase;
 }
 
 h4 code {
@@ -26,12 +26,12 @@ h4 code {
 
 h5,
 .text-epsilon {
-  @apply text-lg font-bold;
+  @apply text-lg font-black uppercase;
 }
 
 h6,
 .text-zeta {
-  @apply text-base font-bold uppercase;
+  @apply text-base font-black uppercase;
 }
 
 .text-small {

@@ -1,7 +1,7 @@
 html,
 body {
   @apply bg-white min-h-screen;
-  @apply dark:bg-zinc-900 dark:text-gray-200 dark:border-gray-800;
+  @apply dark:bg-zinc-900 dark:text-gray-200;
 }
 
 .sidebar {
@@ -13,3 +13,4 @@ body {
 a {
   @apply hover:text-primary;
 }
+
