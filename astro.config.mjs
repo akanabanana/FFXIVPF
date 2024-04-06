@@ -23,8 +23,9 @@ export default defineConfig({
       [rehypeAutolinkHeadings, { behavior: "append" }],
     ],
     shikiConfig: {
-      wrap: true,
+      //wrap: true,
       transformers: [transformerNotationDiff()],
+      theme: "synthwave-84",
     },
   },
   vite: {

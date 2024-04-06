@@ -55,11 +55,12 @@
     counter-reset: step-counter;
 
     > li {
-      @apply relative;
+      @apply relative ml-5;
 
       &::before {
-        @apply absolute -left-4 opacity-60;
-        content: counter(step-counter) '.';
+        @apply absolute -left-7 bg-black text-white w-5 h-5 flex items-center justify-center text-xs font-bold font-mono;
+        @apply dark:bg-white dark:text-black;
+        content: counter(step-counter) '';
         counter-increment: step-counter;
       }
 
@@ -128,9 +129,9 @@
     }
 
     .icon-link {
-      @apply opacity-0 pl-2;
+      @apply opacity-0 pl-2 ease-in-out transition duration-200;
       &::before {
-        content: '#';
+        content: '📎';
         @apply text-primary;
       }
     }

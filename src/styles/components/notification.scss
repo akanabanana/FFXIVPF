@@ -1,19 +1,19 @@
-.tooltip {
+.notification {
   @apply bg-slate-300 border-l-slate-400 py-5 px-8 border-l-8 my-8 text-black;
 
-  .tooltip-title {
+  .notification-title {
     @apply mb-2 font-black text-lg;
   }
 
-  &.tooltip-primary {
+  &.notification-primary {
     @apply bg-primary-light border-l-primary;
   }
 
-  &.tooltip-secondary {
+  &.notification-secondary {
     @apply bg-secondary-light border-l-secondary;
   }
 
-  &.tooltip-notice {
+  &.notification-notice {
     @apply bg-highlighter border-l-highlighter-dark;
   }
 }

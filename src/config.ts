@@ -9,7 +9,7 @@ export const SITE = {
 
 export const GITHUB = {
   repo: "https://github.com/underlost/astro-just-docs",
-  branch: "main",
+  branch: "master",
 }
 
 export const OPEN_GRAPH = {
@@ -21,5 +21,5 @@ export const OPEN_GRAPH = {
 };
 
 export const SIDEBAR = [
-  { text: "underlost.net", link: "https://underlost.net" },
+  { title: "underlost.net", url: "https://underlost.net" },
 ];

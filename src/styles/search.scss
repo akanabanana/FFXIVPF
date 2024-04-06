@@ -1,3 +1,9 @@
 .pagefind-ui__drawer {
   @apply relative z-10 bg-white px-8;
 }
+
+.dark {
+  .pagefind-ui__search-input {
+    @apply bg-zinc-800 text-white border-zinc-600;
+  }
+}

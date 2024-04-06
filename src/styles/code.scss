@@ -1,0 +1,26 @@
+.astro-code.has-diff .diff.add {
+  @apply bg-[#79b169d0]/50;
+}
+.astro-code.has-diff .diff.add span:first-child {
+  color: #6ed292 !important;
+}
+
+.astro-code.has-diff .diff.remove {
+  @apply bg-[#862d2799]/50;
+}
+.astro-code.has-diff .diff.remove span {
+  @apply opacity-50;
+}
+.astro-code.has-diff .diff.remove span:first-child {
+  color: #8d5d5d !important;
+  opacity: 1 !important;
+}
+
+
+.astro-code.has-diff .diff {
+  transition: background-color .5s;
+  margin: 0 -24px;
+  padding: 0 24px;
+  width: calc(100% + 48px);
+  display: inline-block;
+}
