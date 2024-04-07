@@ -1,22 +1,22 @@
 // Typography
 
 h1,
-.text-alpha {
+.h1{
   @apply text-5xl font-black leading-relaxed;
 }
 
 h2,
-.text-beta {
+.h2 {
   @apply text-4xl font-black;
 }
 
 h3,
-.text-gamma {
+.h3 {
   @apply text-2xl font-black;
 }
 
 h4,
-.text-delta {
+.h4 {
   @apply text-xl font-black leading-relaxed uppercase;
 }
 
@@ -25,12 +25,12 @@ h4 code {
 }
 
 h5,
-.text-epsilon {
+.h5 {
   @apply text-lg font-black uppercase;
 }
 
 h6,
-.text-zeta {
+.h6 {
   @apply text-base font-black uppercase;
 }
 

@@ -7,15 +7,19 @@ nav_order: 1
 show_toc: false
 ---
 
+## What is Astro Just Docs?
+
+Astro Just Docs is a flexible, MDX-based authoring framework that allows you to put the focus on writing documentation, while giving you powerful styling options. It has a number of built in styled components, and is built on Tailwind CSS to be as extensible as possible.
+
 ## Getting Started 
 
 ### Dependencies
 
-Astro Just Docs is built for Astro, a static site generator. Just the docs requires no additional setup beyond what's normally expected when setting up an Astro website locally. For more details into how Astro works, check out their [getting started guide](https://docs.astro.build/en/getting-started/). 
+Astro Just Docs is built for Astro, a static site generator. Astro Just Docs requires no additional setup beyond what's normally expected when setting up an Astro website. For more details into how Astro works, check out their [getting started guide](https://docs.astro.build/en/getting-started/). 
 
 ### Running Locally
 
-Running Astro Just Docs isnt any different then any other Astro based site, and can be up and running in just a few commands:
+Running Astro Just Docs isnt any different then any other Astro based site, and can be up and running in just a few commands. To get setDefaultResultOrder, clone the repository and run the following commands to install the dependencies and start the development server:
 
 ```shell
 git clone git@github.com:underlost/astro-just-docs.git
@@ -26,15 +30,15 @@ yarn dev
 
 ### Production
 
-Astro Just Docs has been tested to run in just about any enviroment a normal an Astro-based website can run, such as [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).
+Astro Just Docs is a static website and can be hosted just about anywhere. It has also been tested to run on [Netlify](https://www.netlify.com/), Vercel](https://vercel.com/) and AWS S3.
 
-If youre looking to host the site on more traditional host, run 
+To build a production-ready build of the site to upload somewhere, run: 
 
 ```shell
 yarn build
 ```
 
-to create a public folder that you can then upload anywhere!
+This will create a `dist` folder with all the files needed to host the site.
 
 ### Configuring 
 
@@ -42,14 +46,14 @@ Astro Just Docs has a number of helpful settings. Refer to the [configuration](/
 
 ***
 
-### About the project
+## About the project
 
-Just The Docs is © 2024 by [Tyler Rilling](https://underlost.net/)
+Astro JustDocs is © 2024 by [Tyler Rilling](https://underlost.net/). It was originally created with GatsbyJS, and was inspired by [Just the Docs](https://just-the-docs.com/), a Jekyll theme. It was rewritten in Astro to take advantage of the speed and flexibility of the framework.
 
 ## Contributing
 
 Contributions and feedback are welcome and encouraged. Check out our [contributing guidelines](https://github.com/underlost/just-docs/tree/master/CONTRIBUTING.md) on how to do so.
 
-### License
+## License
 
-Just the Docs is distributed by an [MIT license](https://github.com/underlost/just-docs/tree/master/LICENSE).
+Astro Just Docs is distributed by an [MIT license](https://github.com/underlost/just-docs/tree/master/LICENSE).

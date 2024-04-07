@@ -9,36 +9,18 @@ show_toc: false
 
 Configuration settings can be set in `src/config.ts`. 
 
-## Gatsby
+## SITE
 
-`pathPrefix` Some sites are hosted elsewhere than root. Update this to include the directory Astro Just Docs is hosted in.
+General site settings, such as title, description, and URL.
 
-`siteUrl`: The full path of the live site.
+## GITHUB
 
-`gaTrackingId`: Optional Google tracking ID.
+GitHub settings, such as the repository name and owner. Setting these values will enable the GitHub link in the footer for each page to edit the page content._createMdxContent
 
-`trailingSlash`: Force trailing slash at the end of urls.
+## OPEN_GRAPH
 
-## Header
+Open Graph settings, such as the site name, image, and description. These settings are used when sharing the site on social media.
 
-`Logo`: Set an optional image to replace the header text. Also used for metadata.
+## SIDEBAR
 
-`LogoLink` Set the URl of the logo image.
-
-### Search 
-
-Within the header configuration, there are several fields for API keys for search, powered by Algolia. By registering for a free account and aquire the needed API keys. 
-
-## Sidebar
-
-`forcedNavOrder` Specify the order of the links generated through MDX files. This overrides the `nav_order` frontmatter values.
-
-`collapsedNav` Force Navigation items to stay closed, even if they have child elements.
-
-`links`: Define additional links to appear, that arent generated from the MDX files.
-
-`ignoreIndex`: Hide the homepage from the Navigation list. 
-
-## Site Meta
-
-These settings are all pretty self-explaanitory, controlling meta tags, and favicon. Useful for sharing links to social media.
+By default, a dynamic sidebar menu is generated based on the headings in the markdown files. You can define additional sidebar items by supplying a title and link. 

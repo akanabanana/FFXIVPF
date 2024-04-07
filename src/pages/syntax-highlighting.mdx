@@ -1,39 +1,67 @@
 ---
 layout: '@/layouts/Layout.astro'
 title: "Syntax Highlighting"
-metaTitle: "Syntax Highlighting is the meta title tag for this page"
-metaDescription: "Astro Just Docs uses PrismJS for easy code highlighting"
+metaTitle: "Syntax Highlighting"
+metaDescription: "Astro Just Docs uses Shiki and Expressive Code for easy code highlighting"
 nav_order: 2
 show_toc: false
 ---
+
+
 
 ## Basics
 
 The following is a code block with JavaScript language syntax highlighting:
 
-```javascript
+```javascript title="Javascript"
 import React from 'react';
 ```
 
 ## Supports Multiple Languages
 
-The following are a list of languages automatically supported with out any additional configuration:
+Astro Just Docs uses Shiki and Expressive Code for easy code highlighting. Over 100 languages are supported with no additional configuration. Refer to the [Shiki documentation](https://github.com/shikijs/textmate-grammars-themes/blob/main/packages/tm-grammars/README.md) for a list of supported languages.
 
-markup, bash, clike, c, cpp, css, javascript, jsx, coffeescript, actionscript, css-extr, diff, git, go, graphql, handlebars, json, less, makefile, markdown, objectivec, ocaml, python, reason, sass, scss, sql, stylus, tsx, typescript, wasm, yaml
+## Titles
 
-To add additional languages, refer to the comments within `src/custom/config/codeBlockLanguages.js` to add additional languages.
+To add a title to the code block, use the `title` attribute.
+
+```text showLineNumbers=false
+javascript title="Javascript"
+import React from 'react';
+```
+
+```javascript title="Javascript"
+import React from 'react';
+```
+
+## Line Numbers
+
+By default, the code block will have line numbers. To remove line numbers, use the `showLineNumbers` attribute set to `false`.
+
+```text showLineNumbers=false
+javascript showLineNumbers=false
+import React from 'react';
+```
+
+
+```javascript title="Javascript" showLineNumbers=false
+import React from 'react';
+```
 
 
 ## Diff Highlighting
 
-The following is a code block with diff. Lines with `+` highlighted in green shade indicating an addition. Lines with `-` highlighted in red shade indicating a deletion.
+The following is a code block with diff. The `del` attribute is used to highlight the deleted lines and the `add` attribute is used to highlight the added lines.
 
-```javascript
-- const data = ['1','2']; // [!code --]
-+ const data = [1,2]; // [!code ++]
+```text showLineNumbers=false
+javascript del={1} add={2}
+const data = ['1','2'];
+const data = [1,2];
 ```
 
 
-## Styling
+```javascript del={1} add={2}
+const data = ['1','2'];
+const data = [1,2];
+```
 
-For ways to use the styling in the markdown refer to the [UI Components](/ui-components/code/) section.
