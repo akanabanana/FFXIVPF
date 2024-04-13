@@ -15,14 +15,15 @@ const navigation = getNavigationStructure();
 interface Props {
   content: {
     title: string;
-    metaTitle: string;
-    metaDescription: string;
+    description: string;
+    metaTitle?: string;
+    metaDescription?: string;
   };
   headings: MarkdownHeading[];
 }
 
 const {
-  content: { title, metaTitle, metaDescription },
+  content: { title, description, metaTitle, metaDescription },
   headings,
 } = Astro.props;
 
@@ -42,7 +43,12 @@ const editUrl = `${basePath}src/pages${pagePath}.mdx`;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content={description
+        ? `${metaDescription || description} - ${CONFIG.SITE.description}`
+        : CONFIG.SITE.description}
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -58,7 +64,7 @@ const editUrl = `${basePath}src/pages${pagePath}.mdx`;
     <div class="container mx-auto">
       <div class="grid grid-cols-12">
         <div
-          class="col-span-12 md:col-span-4 lg:col-span-3 xl:col-span-3 2xl:col-span-2 sidebar border-r md:min-h-screen border-color"
+          class="sidebar col-span-12 md:col-span-4 lg:col-span-3 xl:col-span-3 2xl:col-span-2 md:min-h-screen"
         >
           <header
             class="md:h-20 py-3 md:py-0 border-b md:mb-8 border-color flex justify-between"
@@ -131,7 +137,7 @@ const editUrl = `${basePath}src/pages${pagePath}.mdx`;
               </div>
             </div>
 
-            <article class="px-8 py-8">
+            <article class="px-8 lg:px-11 py-8">
               <header class="max-w-2xl">
                 <h1 class="text-6xl font-black mb-2">{title}</h1>
                 <p class="text-2xl text-grey-dk-000 mb-8">
@@ -141,7 +147,7 @@ const editUrl = `${basePath}src/pages${pagePath}.mdx`;
 
               <div class="grid grid-cols-12 lg:gap-x-16">
                 <div class="col-span-12 lg:col-span-9 order-2 lg:order-1">
-                  <section class="main-content ">
+                  <section class="main-content">
                     <slot />
                   </section>
                 </div>
@@ -187,9 +193,19 @@ const editUrl = `${basePath}src/pages${pagePath}.mdx`;
           </main>
 
           <footer class="text-sm px-8 py-8 text-gray-400 border-t border-color">
-            <p class="mb-4">
+            <p>
+              Powered by <a
+                class="underline"
+                href="https://github.com/underlost/astro-just-docs"
+                >Astro Just Docs</a
+              >.
+            </p>
+            <p class="text-xs mb-4">
               Copyright &copy; {new Date().getFullYear()} Tyler Rilling. Distributed
-              by an MIT license.
+              by an <a
+                href="https://github.com/underlost/astro-just-docs/LICENSE"
+                >MIT license</a
+              >.
             </p>
           </footer>
         </div>

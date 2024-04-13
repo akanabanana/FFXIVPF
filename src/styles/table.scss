@@ -1,6 +1,6 @@
 .main-content {
   table {
-      @apply table-auto min-w-full border-separate border border-black border-spacing-0;
+      @apply table-auto min-w-full border-separate border border-black border-spacing-0 mb-11;
       @apply dark:border-white;
   }
   th, td {

@@ -12,6 +12,6 @@ const customClass = props.class ?? "";
 const columns = props.cols ? `grid-col-${props.cols}` : "grid-col-2";
 ---
 
-<div class={`grid gap-4 ${customClass} ${columns}`}>
+<div class={`grid gap-4 mb-8 ${customClass} ${columns}`}>
   <slot />
 </div>

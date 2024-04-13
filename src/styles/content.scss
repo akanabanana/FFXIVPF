@@ -131,7 +131,7 @@
     .icon-link {
       @apply opacity-0 pl-2 ease-in-out transition duration-200;
       &::before {
-        content: '📎';
+        content: '#';
         @apply text-primary;
       }
     }

@@ -25,6 +25,7 @@
     "dotenv": "^16.4.5",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
+    "hastscript": "^9.0.0",
     "mdast-util-mdxjs-esm": "^2.0.1",
     "pagefind": "^1.0.4",
     "preact": "^10.20.0",
