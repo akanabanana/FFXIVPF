@@ -27,7 +27,7 @@ However, with the lack of updates to Gatsby, and the rise of popularity with Ast
 
 ## Live Demo
 
-View the demo, and all of its features in the [live demo](https://astro-just-docs.netlify.app). Hosted on Netlify.
+View the demo, and all of its features in the [live demo](https://astrojustdocs.netlify.app). Hosted on Netlify.
 
 ## Getting Started
 
@@ -44,9 +44,8 @@ Visit `http://localhost:4321/` to view the app.
 
 ## Credits
 
-- Code based on [gatsby-gitbook-starter](https://github.com/hasura/gatsby-gitbook-starter)
-- Styling based on [Just The Docs](https://github.com/just-the-docs/just-the-docs)
-- Web framework by [Astro](https://www.gatsbyjs.com/)
+- Concept originally based on [Just The Docs](https://github.com/just-the-docs/just-the-docs)
+- Web framework by [Astro](https://astro.build/)
 
 ## Contributing
 
