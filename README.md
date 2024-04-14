@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-    <img src="https://raw.githubusercontent.com/underlost/gatsby-just-docs/master/public/AstroJustDocs-Badge.png" alt="Astro Just Docs" width="260">
+    <img src="https://raw.githubusercontent.com/underlost/astro-just-docs/master/public/AstroJustDocs-Badge.png" alt="Astro Just Docs" width="260">
   <br>
   <br>
 </h1>
