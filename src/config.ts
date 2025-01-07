@@ -1,14 +1,13 @@
 export const SITE = {
-  title: "Astro Just Docs",
-  description: "A powerful MDX based authoring framework for building great documentation.",
+  title: "FFXIVPF",
+  description: "It's a library for my own sanity",
   defaultLanguage: "en_US",
-  twitter: "@underlost",
-  github: "underlost",
-  linkedin: "underlost",
+  twitter: "@akanabanana",
+  github: "akanabanana",
 };
 
 export const GITHUB = {
-  repo: "https://github.com/underlost/astro-just-docs",
+  repo: "https://akanabanana.github.io/FFXIVPF",
   branch: "master",
 }
 
