@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#FF269E",
+        primary: "#edae49",
         "primary-light": "#FFDCED",
-        secondary: "#00D7B0",
+        secondary: "#d1495b",
         "secondary-light": "#B8FFF3",
         highlighter: "#FAF77D",
-        "highlighter-dark": "#C5C207",
+        "highlighter-dark": "#00798c",
         "slate-900": "#18181B",
         "slate-800": "#1B1B1F",
         "slate-700": "#202127",
