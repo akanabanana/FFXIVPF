@@ -20,7 +20,7 @@ const projectRootDir = path.dirname(fileURLToPath(import.meta.url));
 // https://astro.build/config
 export default defineConfig({
   site: 'https://akanabanana.github.io/FFXIVPF/',
-  base: 'master',
+  base: '/docs',
   integrations: [
     preact(),
     tailwind(),
