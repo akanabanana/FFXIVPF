@@ -7,8 +7,8 @@ export const SITE = {
 };
 
 export const GITHUB = {
-  repo: "https://akanabanana.github.io/FFXIVPF",
-  branch: "master",
+  repo: "https://akanabanana.github.io/",
+  branch: "/FFXIVPF",
 }
 
 export const OPEN_GRAPH = {
