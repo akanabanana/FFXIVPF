@@ -20,5 +20,5 @@ export const OPEN_GRAPH = {
 };
 
 export const SIDEBAR = [
-  { title: "underlost.net", url: "https://underlost.net" },
+  { title: "Kana's twitch", url: "https://www.twitch.tv/akanabanana" },
 ];
