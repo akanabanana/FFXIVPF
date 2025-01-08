@@ -9,7 +9,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import expressiveCode from "astro-expressive-code";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
-import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
+import Lightbox from "@julian_cataldo/astro-lightbox/Lightbox.astro";
 
 // Remark
 import remarkSectionize from "./src/utils/remark/sectionize";
