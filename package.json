@@ -17,6 +17,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@expressive-code/plugin-line-numbers": "^0.34.0",
     "@hbsnow/rehype-sectionize": "^1.0.7",
+    "@julian_cataldo/astro-lightbox": "^0.10.11",
     "@shikijs/transformers": "^1.2.0",
     "astro": "^4.5.8",
     "astro-expressive-code": "^0.34.0",
